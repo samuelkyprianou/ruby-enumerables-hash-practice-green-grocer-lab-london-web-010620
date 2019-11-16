@@ -35,8 +35,8 @@ end
 end
 
 def apply_clearance(cart)
-  cart.each do |discount|
-    apply_discount = discount[:clearance]
+  cart.each do |item|
+    apply_discount = item[:clearance]
     if apply_discount
       
 end
