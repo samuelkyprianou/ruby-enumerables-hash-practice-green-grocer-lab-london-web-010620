@@ -34,8 +34,11 @@ end
   cart
 end
 
+require 'pry'
+
 def apply_clearance(cart)
   cart.each do |item|
+    apply_discount = item[:clearance]
     binding.pry  
 end
 
