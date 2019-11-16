@@ -1,9 +1,28 @@
+require 'pry'
+
 def consolidate_cart(cart)
-  # code here
+  new_hash = {}
+  cart.each do |element_hash|
+    element_name = element_hash.keys[0]
+  
+  if new_hash.has_key?(element_name)
+    new_hash[element_name][:count] += 1
+    else
+    new_hash[element_name] = {
+      count: 1,
+      price: element_hash[element_name][:price],
+      clearance: element_hash[element_name][:clearance]
+    }
+    end
+  end
+  new_hash
 end
 
 def apply_coupons(cart, coupons)
-  # code here
+  coupons.each do |coupon|
+    item = coupon[:item] && coupon[:item][:count] >= coupon[:num] && !cart["#{item} W/COUPON"]
+    if cart[item]
+  end
 end
 
 def apply_clearance(cart)
