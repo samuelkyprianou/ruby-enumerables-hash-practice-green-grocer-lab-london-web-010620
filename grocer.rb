@@ -36,7 +36,7 @@ end
 
 def apply_clearance(cart)
   cart.each do |item, stats|
-    
+    binding.pry
   end
   cart
 end
