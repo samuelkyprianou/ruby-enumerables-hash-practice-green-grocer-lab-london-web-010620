@@ -47,5 +47,5 @@ def checkout(cart, coupons)
   sorted_cart = consolidate_cart(cart)
   applied_coupons = apply_coupons(sorted_cart, coupons)
   applied_discount = apply_clearance(applied_coupons)
-  total = applied_discount.reduce(0) |acc 
+  total = applied_discount.reduce(0) |acc, (key, value)| 
 end
